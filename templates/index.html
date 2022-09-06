@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}
+index
+{% endblock%}
+
+{% block page_body %}
+<style>
+    *{
+       background: green;
+    }
+</style>
+<div align="center"><b>Welcome</b></div>
+<div align="center" ><b>The time right now is {{ cur_date }}</b></div>
+
+<p>
+    These are the current tasks:<br>
+<ul>
+        {% for task in tasks %}
+        <li>{{ task }}</li>
+        {% endfor %}
+    </ul>
+</p>
+
+{% endblock%}
