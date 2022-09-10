@@ -47,6 +47,9 @@ class Task(models.Model):
     def get_status_display(self):
         pass
 
+    def get_all_tags(self, delimiter=','):
+        return delimiter.join([tag.name for tag in self.tags.all()])
+
 # Relationship between Task and Tag
 # 1 task can have 1/more tags and 1 tag can have 1/more tasks
 # Hence a Many-To-Many relationship exists

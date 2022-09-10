@@ -28,7 +28,7 @@ class TaskAdmin(admin.ModelAdmin):
 
     # Add attributes on the main page of the table
     # We can add attributes and properties
-    list_display = ['content', 'status', 'created_at', 'foo']
+    list_display = ['content', 'status', 'created_at', 'foo', 'get_all_tags']
 
     # We can make the attributes / properties in the list_display editable
     # The attributes / properties mentioned here has to be mandatory present in list_display
